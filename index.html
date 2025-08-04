@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12-Day Digital Business Bootcamp | Brandmingo Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <style>
+/* =============================================
+   Brandmingo Academy Bootcamp Landing Page CSS
+   Extended: More Styling, Effects, Depth, Length > 800 lines
+   ============================================= */
+
+:root {
+  --bg-dark: #0e0f1a;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+  --white: #ffffff;
+  --primary: #ff4d4f;
+  --secondary: #ff8c00;
+  --accent: #5eead4;
+  --gradient: linear-gradient(135deg, #ff4d4f, #ff8c00);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-color: #f1f1f1;
+  --font: 'Poppins', sans-serif;
+  --radius: 16px;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg-dark);
+  color: var(--text-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0;
+}
+
+
+ .logo {
+      max-width: 290px;
+      background:white;
+      border-radius:100px;
+      padding:6px;
+      margin-bottom: 1.5rem;
+      filter: drop-shadow(0 0 10px rgba(100, 230, 179, 0.3));
+  }
+
+/* ==============================
+   Glass Card Styling
+============================== */
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: 0 10px 35px rgba(255, 255, 255, 0.08);
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.1);
+}
+
+/* ==============================
+   HERO SECTION - UPGRADED
+============================== */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(135deg, #120b2a, #0e0f1a);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.hero-section::before {
+  width: 400px;
+  height: 400px;
+  background: #ff4d4f;
+  top: -100px;
+  left: -80px;
+  opacity: 0.3;
+}
+
+.hero-section::after {
+  width: 300px;
+  height: 300px;
+  background: #5eead4;
+  bottom: -80px;
+  right: -100px;
+  opacity: 0.2;
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(to right, #ff8c00, #ff4d4f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(255, 77, 79, 0.1);
+  margin-bottom: 20px;
+  /* Removed animation for clean, static effect */
+}
+
+
+@keyframes shineText {
+  0% { background-position: -500px 0; }
+  100% { background-position: 500px 0; }
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #c0c0c0;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-stats li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 16px;
+  border-radius: 20px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.hero-stats i {
+  color: var(--accent);
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.hero-stats li:hover i {
+  transform: scale(1.2);
+}
+
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-details span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #e0e0e0;
+  transition: 0.3s;
+}
+
+.hero-details span i {
+  color: var(--secondary);
+}
+
+.hero-details span:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+  padding: 16px 36px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0 0 25px rgba(255, 77, 79, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;  /* ✅ center horizontally */
+  gap: 10px;
+  text-align: center;       /* ✅ ensures multiline text is centered */
+  width: 100%;              /* optional: full-width if used inside flex/grid */
+  max-width: 300px;         /* optional: to limit button size */
+  transition: all 0.4s ease;
+}
+
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.4);
+  background: linear-gradient(135deg, #ff8c00, #ff4d4f);
+}
+
+.btn-primary i {
+  animation: bounce 2s infinite;
+  color: white;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* =============================================
+   Problems Section Styling
+============================================= */
+
+.section.problems {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f0f1f, #0e0f1a);
+  position: relative;
+  z-index: 2;
+}
+
+.section.problems h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  background: linear-gradient(90deg, #ff4d4f, #ff8c00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(255, 140, 0, 0.1);
+}
+
+.section.problems h2 i {
+  font-size: 28px;
+  color: var(--accent);
+  animation: pulseIcon 1.5s infinite ease-in-out;
+}
+
+.section.problems ul {
+  margin-bottom: 20px;
+}
+
+.section.problems li {
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #e0e0e0;
+  padding: 10px 16px;
+  border-left: 4px solid var(--primary);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  transition: background 0.3s;
+}
+
+.section.problems li i {
+  color: #ff4d4f;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.section.problems li:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.section.problems li:hover i {
+  transform: scale(1.2);
+}
+
+.section.problems .note {
+  font-size: 17px;
+  font-style: italic;
+  color: #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  margin-top: 25px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section.problems .note i {
+  color: #ffd700;
+  font-size: 18px;
+}
+
+/* Animation for icons */
+@keyframes pulseIcon {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .section.problems h2 {
+    font-size: 26px;
+  }
+
+  .section.problems li {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  .section.problems .note {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section.problems {
+    padding: 60px 16px;
+  }
+
+  .section.problems h2 {
+    font-size: 22px;
+  }
+
+  .section.problems li {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
+  .section.problems .note {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ==============================
+   VALUE SECTION (FEATURES GRID)
+============================== */
+.value {
+  padding: 80px 20px;
+  position: relative;
+  background: linear-gradient(145deg, #0e0f1a, #161a2e);
+  z-index: 1;
+}
+
+.value h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 45px rgba(94, 234, 212, 0.2);
+}
+
+.feature-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.feature-item h3 i {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+.feature-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item ul li {
+  margin-bottom: 12px;
+  position: relative;
+  font-size: 15px;
+  padding-left: 28px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.feature-item ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  font-size: 14px;
+  color: #5eead4;
+  transition: transform 0.3s ease;
+}
+
+.feature-item ul li:hover::before {
+  transform: scale(1.2);
+}
+
+/* Hover icon color update */
+.feature-item ul li:hover {
+  color: #f5f5f5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-item {
+    padding: 24px 20px;
+  }
+
+  .feature-item h3 {
+    font-size: 18px;
+  }
+
+  .feature-item ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .value h2 {
+    font-size: 26px;
+  }
+
+  .feature-item {
+    padding: 20px;
+  }
+
+  .feature-item ul li {
+    padding-left: 26px;
+  }
+}
+
+/* ==============================
+   Bonus Bonanza Section
+============================== */
+.bonuses {
+  padding: 60px 20px;
+}
+
+.bonuses .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+}
+
+.bonuses h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.bonuses h2 i {
+  color: var(--accent);
+  font-size: 26px;
+}
+
+.bonuses ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bonuses ul li {
+  font-size: 16px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 10px 16px;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.bonuses ul li:hover {
+  background: rgba(94, 234, 212, 0.07);
+}
+
+.bonuses ul li i {
+  font-size: 18px;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.bonuses ul li:hover i {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .bonuses .glass-card {
+    padding: 30px 20px;
+  }
+
+  .bonuses h2 {
+    font-size: 24px;
+  }
+
+  .bonuses ul li {
+    font-size: 15px;
+  }
+}
+/* ==============================
+   Bonus Bonanza Grid Style
+============================== */
+.bonuses {
+  padding: 60px 20px;
+}
+
+.bonuses .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+}
+
+.bonuses h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.bonuses h2 i {
+  color: var(--accent);
+  font-size: 26px;
+}
+
+/* Bonus Grid Container */
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Individual Bonus Card */
+.bonus-item {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  transition: 0.3s ease;
+  color: var(--text-color);
+  box-shadow: 0 0 0 transparent;
+}
+
+.bonus-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(94, 234, 212, 0.15);
+  background: rgba(94, 234, 212, 0.06);
+}
+
+.bonus-item i {
+  font-size: 20px;
+  color: var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.bonus-item:hover i {
+  transform: scale(1.2);
+}
+
+.bonus-item span {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .bonuses h2 {
+    font-size: 24px;
+  }
+
+  .bonus-item {
+    padding: 16px;
+  }
+
+  .bonus-item i {
+    font-size: 18px;
+  }
+
+  .bonus-item span {
+    font-size: 14px;
+  }
+}
+
+/* ==============================
+   Timeline Section – Final Polished
+============================== */
+
+/* ===========================
+   Timeline Wrapper Styling
+=========================== */
+.timeline-wrapper {
+  background: rgba(255, 255, 255, 0.015);
+  padding: 40px 30px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
+}
+
+/* ===========================
+   Timeline Core Styling
+=========================== */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  border-left: 2px solid var(--accent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -22px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent);
+  color: #0e0f1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 0 12px rgba(94, 234, 212, 0.4);
+  z-index: 2;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+.timeline-content h3 {
+  font-size: 18px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.timeline-content ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.timeline-content ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.timeline-content ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* ===========================
+   Responsive Adjustments
+=========================== */
+@media (max-width: 768px) {
+  .timeline-wrapper {
+    padding: 30px 20px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+    padding-right: 16px;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    left: -18px;
+  }
+
+  .timeline-content {
+    padding: 16px 18px;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+  }
+
+  .timeline-content ul li {
+    font-size: 14px;
+  }
+}
+
+/* ==============================
+   Sneak Peek Section
+============================== */
+.sneak-peek h2 {
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sneak-peek h2 i {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.sneak-peek p {
+  color: #cfcfcf;
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: var(--radius);
+}
+
+
+/* ==============================
+   Promise Section
+============================== */
+
+.section{
+  margin-top:20px;
+}
+.promise h2 {
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.promise h2 i {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.promise ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.promise ul li {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #ddd;
+  transition: 0.3s ease;
+}
+
+.promise ul li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(94, 234, 212, 0.15);
+}
+
+.promise ul li i {
+  color: var(--accent);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+
+/* ==============================
+   Pricing Section (Final Enhanced)
+============================== */
+.pricing {
+  padding: 60px 20px;
+}
+
+.price-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 50px 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  max-width: 500px;
+  margin-inline: auto;
+  transition: 0.3s ease;
+}
+
+.price-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(94, 234, 212, 0.1);
+}
+
+.price-box h2 {
+  font-size: 26px;
+  color: var(--white);
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-box h2 i {
+  color: var(--accent);
+  font-size: 22px;
+}
+
+.original-price {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.original-price span {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.offer-price {
+  font-size: 42px;
+  font-weight: 700;
+  color: #5eead4;
+  margin-bottom: 12px;
+}
+
+.price-note {
+  font-size: 15px;
+  color: #ccc;
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+/* CTA Button */
+.price-box .btn-primary {
+  font-size: 16px;
+  padding: 14px 30px;
+  border-radius: 30px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .price-box {
+    padding: 40px 20px;
+  }
+
+  .price-box h2 {
+    font-size: 22px;
+  }
+
+  .offer-price {
+    font-size: 34px;
+  }
+
+  .price-box .btn-primary {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
+
+
+.sticky-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  padding: 10px 28px;
+  display: flex;
+  gap: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.sticky-nav a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: color 0.3s ease, background 0.3s ease;
+  z-index: 1;
+}
+
+.sticky-nav a i {
+  font-size: 16px;
+  color: var(--accent);
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+/* Gradient shimmer on hover */
+.sticky-nav a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, #5eead4, #ff4d4f, #5eead4);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.sticky-nav a:hover::before {
+  left: 0;
+  opacity: 0.1;
+}
+
+.sticky-nav a:hover {
+  color: var(--accent);
+}
+
+.sticky-nav a:hover i {
+  color: var(--primary);
+}
+
+.sticky-nav a span,
+.sticky-nav a i {
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sticky-nav {
+    padding: 10px 20px;
+    gap: 20px;
+  }
+
+  .sticky-nav a {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .sticky-nav i {
+    font-size: 14px;
+  }
+}
+
+  /* WhatsApp Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 150px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      text-decoration:none;
+      box-shadow: 0 10px 20px rgba(37, 216, 102, 0.3);
+      z-index: 1000;
+      transition: all 0.3s;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 15px 30px rgba(37, 216, 102, 0.4);
+    }
+
+
+/* ==============================
+   Animation + Reveal
+============================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* ==============================
+   Media Queries
+============================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-details span {
+    font-size: 13px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 100px;
+  }
+  .sticky-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .container {
+    padding: 30px 0;
+  }
+}
+
+/* ==============================
+   Extras / Placeholder Extensions
+============================== */
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 14px;
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.badge {
+  background: var(--primary);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  color: white;
+  margin-left: 10px;
+}
+
+</style>
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <img src="https://brandmingo.academy/wp-content/uploads/2024/07/BMA-Logo-.png" alt="Brandmingo Academy Logo" class="logo">
+      <h1>Launch & Grow: 12-Day Digital Business Bootcamp</h1>
+      <p>Build your own Shopify store, design brand visuals, rank on Google, and run marketing campaigns – in just 12 days.</p>
+      <ul class="hero-stats">
+        <li><i class="fas fa-users"></i> 2,500+ Students</li>
+        <li><i class="fas fa-star"></i> 4.9/5 Ratings</li>
+        <li><i class="fas fa-certificate"></i> Certificate Included</li>
+      </ul>
+      <div class="hero-details">
+        <span><i class="fas fa-calendar-alt"></i> 12 Days</span>
+        <span><i class="fas fa-clock"></i> 1 Hour/Day</span>
+        <span><i class="fas fa-video"></i> Live Zoom</span>
+        <span><i class="fas fa-language"></i> Hinglish</span>
+        <span><i class="fas fa-user-friends"></i> Mentor Support</span>
+      </div>
+      <a href="#enroll" class="btn btn-primary"><i class="fas fa-rocket"></i> Enroll Now – ₹1,299</a>
+    </div>
+  </header>
+
+  <!-- PROBLEMS SECTION -->
+  <section class="section problems">
+    <div class="container glass-card">
+      <h2><i class="fas fa-question-circle"></i> Problems You Might Relate To</h2>
+      <ul>
+        <li><i class="fas fa-times-circle"></i> Tried making a store but gave up due to tech?</li>
+        <li><i class="fas fa-times-circle"></i> Don’t know how to make designs that convert?</li>
+        <li><i class="fas fa-times-circle"></i> SEO sounds confusing and “too expert-level”?</li>
+        <li><i class="fas fa-times-circle"></i> Tired of watching YouTube videos with no results?</li>
+      </ul>
+      <p class="note"><i class="fas fa-lightbulb"></i> You need structure. Mentorship. Tools. A Push.</p>
+    </div>
+  </section>
+
+  <!-- VALUE SECTION -->
+  <section class="section value">
+    <div class="container glass-card">
+      <h2><i class="fas fa-box-open"></i> What You’ll Get (Insane Value!)</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3><i class="fas fa-store"></i> Shopify (Days 1–3)</h3>
+          <ul>
+            <li>Build & launch your online store</li>
+            <li>10+ premium themes (₹40k+ value)</li>
+            <li>Custom Liquid Codes & setup guide</li>
+          </ul>
+        </div>
+        <div class="feature-item">
+          <h3><i class="fas fa-pencil-ruler"></i> Canva (Days 4–6)</h3>
+          <ul>
+            <li>Design for reels, ads, banners</li>
+            <li>2 months Canva Pro access</li>
+            <li>Visual branding & templates</li>
+          </ul>
+        </div>
+        <div class="feature-item">
+          <h3><i class="fas fa-search"></i> SEO (Days 7–9)</h3>
+          <ul>
+            <li>Keyword research & setup</li>
+            <li>Shopify SEO tools</li>
+            <li>Bonus: SEO Toolkit Sheet</li>
+          </ul>
+        </div>
+        <div class="feature-item">
+          <h3><i class="fas fa-bullhorn"></i> Digital Marketing (Days 10–12)</h3>
+          <ul>
+            <li>Instagram + Meta Ads</li>
+            <li>Funnel strategy PDF</li>
+            <li>Paid vs Organic Campaigns</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUSES SECTION -->
+  <section class="section bonuses">
+    <div class="container glass-card">
+      <h2><i class="fas fa-gift"></i> Bonus Bonanza</h2>
+      <ul>
+        <li><i class="fas fa-users"></i> Mentor’s WhatsApp Group</li>
+        <li><i class="fas fa-user-plus"></i> 1-on-1 Support</li>
+        <li><i class="fas fa-chalkboard-teacher"></i> Access to Future Webinars</li>
+        <li><i class="fas fa-certificate"></i> Completion Certificates</li>
+        <li><i class="fas fa-award"></i> 1 Winner = Paid Internship</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CURRICULUM SECTION -->
+  
+ <section class="section curriculum" id="curriculum">
+  <div class="container">
+    <h2><i class="fas fa-book-open"></i> Course Curriculum Snapshot</h2>
+
+    <div class="timeline-wrapper">
+      <div class="timeline">
+
+        <!-- Shopify Section -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Shopify (Day 1–3)</h3>
+            <ul>
+              <li>Learn how to set up a professional online store from scratch</li>
+              <li>Master theme customization techniques to match your brand's identity</li>
+              <li>Integrate products, payments, shipping, and checkout like a pro</li>
+              <li>Bonus: Discover powerful Liquid code snippets to extend functionality</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Canva Section -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Canva (Day 4–6)</h3>
+            <ul>
+              <li>Create your brand kit with logos, colours, fonts, and templates</li>
+              <li>Design stunning Instagram reels, carousels, and ads that convert</li>
+              <li>Explore tools for high-converting banners and product creatives</li>
+              <li>Bonus: Get 2 months of Canva Pro for advanced design capabilities</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- SEO Section -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>SEO (Day 7–9)</h3>
+            <ul>
+              <li>Conduct effective keyword research for your niche</li>
+              <li>Set up and optimize SEO on Shopify for better visibility</li>
+              <li>Learn how to submit your store to Google and get indexed</li>
+              <li>Bonus: Download the exclusive SEO Toolkit spreadsheet</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Digital Marketing Section -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="timeline-content">
+            <h3>Digital Marketing (Day 10–12)</h3>
+            <ul>
+              <li>Understand how paid ads work across Instagram & Meta platforms</li>
+              <li>Learn organic strategies to grow followers and build engagement</li>
+              <li>Design effective DM and landing page funnels</li>
+              <li>Bonus: Access a ready-to-use funnel strategy PDF to launch campaigns</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SNEAK PEEK -->
+  <section class="section sneak-peek" id="video">
+    <div class="container glass-card">
+      <h2><i class="fas fa-video"></i> Sneak Peek</h2>
+      <p>Watch what you'll learn, how the sessions look, and hear real student feedback.</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/-NyKILPBXNA" title="Preview" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE -->
+  <section class="section promise">
+    <div class="container glass-card">
+      <h2><i class="fas fa-shield-alt"></i> Our Promise To You</h2>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> Real skills. No fluff.</li>
+        <li><i class="fas fa-headset"></i> Group + 1-on-1 Mentor Support</li>
+        <li><i class="fas fa-award"></i> Certifications Included</li>
+        <li><i class="fas fa-briefcase"></i> Internship for Top Performer</li>
+        <li><i class="fas fa-chart-line"></i> Learn → Practice → Implement</li>
+      </ul>
+    </div>
+  </section>
+
+
+<!-- PRICING -->
+<section class="section pricing" id="enroll">
+  <div class="container">
+    <div class="price-box glass-card">
+      <h2><i class="fas fa-tags"></i> Pricing</h2>
+      <p class="original-price">Actual Price: <span>₹2,696</span></p>
+      <p class="offer-price">50% Off @ ₹1,299</p>
+      <p class="price-note">🔥 Limited Seats • No Hidden Charges</p>
+      <a href="#" class="btn btn-primary">
+        <i class="fas fa-rocket"></i> Join Now
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- STICKY NAV -->
+<div class="sticky-nav" id="stickyNav">
+  <a href="#video"><i class="fas fa-play"></i><span>Preview</span></a>
+  <a href="#curriculum"><i class="fas fa-book-open"></i><span>Curriculum</span></a>
+  <a href="#enroll"><i class="fas fa-bolt"></i><span>Enroll</span></a>
+</div>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/916296042220" class="whatsapp-btn" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+</body>
+</html>
